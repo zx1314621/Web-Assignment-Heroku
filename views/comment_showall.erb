@@ -1,0 +1,7 @@
+<h1>Show All Comments</h1>
+<ul>
+	<% @comments.each do |comment|%>
+	<li ><a href="/comments/getinfo/<%= comment.id %>" ><%= comment.title %>-<%= comment.created_at %></a></li>
+    <% end %>
+    <li ><a href="/comments/main" >return</a></li>
+</ul>

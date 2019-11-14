@@ -1,0 +1,26 @@
+<h1><%= @comment.title %></h1>
+<form action="/comments/edit_delete" method='post'>
+	<label>ID</label><input readonly="readonly" type='text' name='id' value="<%= @comment.id %>"></input><br>
+	<label>TITLE</label><input type='text' name='title' value="<%= @comment.title %>"></input><br>
+	<label>CONTENT</label><input type='text' name='content' value="<%= @comment.content %>"></input><br>
+	<label>DATE</label><input readonly="readonly" type='text' name='date' value="<%= @comment.created_at %>"></input>
+	<br>
+      <input type='submit' value="delete" name="delete"></input> 
+      <input type='submit' value="edit" name="edit"></input>
+      <input type='submit' value="return" name="return"></input>
+ </form>
+
+  <style type="text/css">
+.center{
+        text-align: center;
+}
+label {
+        display: inline-block;
+        width: 100px;
+        text-align: center;
+}
+input{
+		text-align: center;
+        vertical-align: top;
+}
+ </style>

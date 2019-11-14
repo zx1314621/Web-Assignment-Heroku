@@ -1,0 +1,7 @@
+<h1>Show All Students</h1>
+<ul>
+	<% @students.each do |student|%>
+	<li ><a href="/students/getinfo/<%= student.id %>" ><%= student.firstname %></a></li>
+    <% end %>
+    <li ><a href="/students/main" >return</a></li>
+</ul>

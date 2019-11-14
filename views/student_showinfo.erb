@@ -1,0 +1,28 @@
+<h1><%= @student.firstname %></h1>
+<form action="/students/edit_delete" method='post'>
+	<label>ID</label><input readonly="readonly" type='text' name='id' value="<%= @student.id %>"></input><br>
+	<label>FIRSTNAME</label><input type='text' name='firstname' value="<%= @student.firstname %>"></input><br>
+	<label>LASTNAME</label><input type='text' name='lastname' value="<%= @student.lastname %>"></input><br>
+	<label>BIRTHDAY</label><input type='text' name='birthday' value="<%= @student.birthday %>"></input><br>
+	<label>ADDRESS</label><input type='text' name='address' value="<%= @student.address %>"></input><br>
+	<label>PASSWORD</label><input type='text' name='password' value="<%= @student.password %>"></input>
+	<br>
+      <input type='submit' value="delete" name="delete"></input> 
+      <input type='submit' value="edit" name="edit"></input>
+      <input type='submit' value="return" name="return"></input>
+ </form>
+
+  <style type="text/css">
+.center{
+        text-align: center;
+}
+label {
+        display: inline-block;
+        width: 100px;
+        text-align: center;
+}
+input{
+		text-align: center;
+        vertical-align: top;
+}
+ </style>
